@@ -1,4 +1,5 @@
-//Q.1 Write a Program to check if a given password is strong or not by satisfying the below criteria:
+ //Q.1 Write a Program to check if a given password is strong 
+ //or not by satisfying the below criteria:
 //- Password must contain at least one letter, one digit & one special symbol.
 //- Password must be at least 6 characters.For example,
 //Input:
@@ -18,40 +19,34 @@
 //
 
 
-#include <stdio.h>
 
-   int is_strong_password(char *password) {
-   	
-    int i, has_letter = 0, has_digit = 0, has_special = 0, length = strlen(password);
+#include<stdio.h>
 
-    if (length < 6) {
-        
-    }
+main(){
+	int i,length,upr=0,lwr=0,num=0,spec=0;
 
-    for (i = 0; i < length; i++) {
-        if (isalpha(password[i])) {
-            has_letter = 1;
-        } else if (isdigit(password[i])) {
-            has_digit = 1;
-        } else if (!isalnum(password[i])) {
-            has_special = 1;
-        }
-    }
+	char pwd[10];
+	printf("Create your password: ");
+	gets(pwd);
 
-    return (has_letter && has_digit && has_special);
-}
+	length=strlen(pwd);
 
-int main() {
-    char password[50];
+	for(i=0;i<length;i++){
+		if(pwd[i]<=65 && pwd[i]>=90)
+			upr++;
+		if(pwd[i]<=97 && pwd[i]>=122)
+			lwr++;
+		if(pwd[i]<=48 && pwd[i]>=57)
+			num++;
+		if(pwd[i]=='@' || pwd[i]=='#' || pwd[i]=='_' || pwd[i]=='-')
+			spec++;
+	}
 
-    printf("Enter the password: ");
-    scanf("%s", password);
-
-    if (is_strong_password(password)) {
-        printf("Strong password!\n");
-    } else {
-        printf("Your password is not Strong.\n");
-    }
-
+	if(upr>0 && lwr>0 && num>0 && spec>0){
+		printf("Your password is  not Strong.");
+	}
+	else{
+		printf("Your password is strong..");
+	}
 }
 
