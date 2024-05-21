@@ -1,21 +1,22 @@
-//Q.2 Write a Program to create a login mechanism by entering the right email & password. You can compare it with your desired email & password.
+//Q.2 Write a Program to count the frequency of each character in a given string.
 //For example,
 //Input:
-//Enter your email: admin@gmail.com
-//Enter your password: 123456
+//Enter any string: development
 //
 //Output:
-//Login Successful...
-//
-//-----------------------------------------
-//
-//For example,
-//Input:
-//Enter your email: xyz@gmail.com
-//Enter your password: 123456
-//
-//Output:
-//Login Failed. Invalid Credentials.
+//Frequency of each letter:
+//d => 1
+//e => 3
+//v => 1
+//e => 3
+//l => 1
+//o => 1
+//p => 1
+//m => 1
+//e => 3
+//n => 1
+//t => 1
+
 
 #include <stdio.h>
 main(){

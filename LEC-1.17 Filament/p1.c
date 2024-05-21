@@ -1,21 +1,19 @@
-//Q.1 Write a Program to check if a given password is strong or not by satisfying the below criteria:
-//- Password must contain at least one letter, one digit & one special symbol.
-//- Password must be at least 6 characters.For example,
+//Q.1 Write a Program to check whether a string is a palindrome or not without using string functions.
+//For example,
 //Input:
-//Create your password: Admin@123
+//Enter any string: nayan
 //
 //Output:
-//Your password is Strong.
+//Given string is a Palindrome.
 //
-//-----------------------------------------
+//------------------------------------------------
 //
 //For example,
 //Input:
-//Create your password: hello#89
+//Enter any string: hello
 //
 //Output:
-//Your password is not Strong.
-//
+//Given string is not a Palindrome.
 
 #include<stdio.h>
 main()
